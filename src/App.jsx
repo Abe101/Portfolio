@@ -1,9 +1,11 @@
+import Intro from "./sections/Intro";
+import About from "./sections/About";
+
 function App() {
   return (
-    <div className='body' data-theme='forest'>
-      <div className='container m-5'>
-        <button className='btn btn-primary'>Click me!</button>
-      </div>
+    <div className='body flex flex-col' data-theme='forest'>
+      <Intro />
+      <About />
     </div>
   );
 }
