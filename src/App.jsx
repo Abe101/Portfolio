@@ -3,7 +3,7 @@ import About from "./sections/About";
 
 function App() {
   return (
-    <div className='body flex flex-col' data-theme='forest'>
+    <div className='body flex flex-col wallpaper' data-theme='forest'>
       <Intro />
       <About />
     </div>
