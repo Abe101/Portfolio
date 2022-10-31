@@ -1,11 +1,11 @@
 export default function About() {
   return (
     <div className='min-h-screen container p-5'>
-      <div className='flex flex-col items-center my-auto'>
+      <div className='flex flex-col items-center p-6 bg-base-100 rounded-xl border border-base-content'>
         <p className='prose text-4xl font-semibold my-4'>
           A lil' something about me!
         </p>
-        <p className='prose text-xl text-justify text-[#f0f0f0] my-4 flex flex-col gap'>
+        <p className='prose text-xl text-justify my-4 flex flex-col gap'>
           <span>
             I am a Pakistani INTP self-taught developer mostly interested in
             front-end development. 👋
@@ -36,7 +36,11 @@ export default function About() {
             />{" "}
             if I am able to (I also made a Minecraft clone with React, heres a{" "}
             <span>
-              <a href='https://minecraft-react-pi.vercel.app/' target='_blank'>
+              <a
+                className='link link-success'
+                href='https://minecraft-react-pi.vercel.app/'
+                target='_blank'
+              >
                 link
               </a>
             </span>{" "}
