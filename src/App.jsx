@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Events, scrollSpy } from "react-scroll";
+import { Events, scrollSpy, Element } from "react-scroll";
 
 import Header from "./components/Header";
 import Intro from "./sections/Intro";
@@ -7,7 +7,7 @@ import About from "./sections/About";
 import Techs from "./sections/Techs";
 
 function App() {
-  const [theme, setTheme] = useState("forest");
+  const [theme, setTheme] = useState("night");
 
   useEffect(() => {
     Events.scrollEvent.register("begin", (to, element) => {});
@@ -22,14 +22,20 @@ function App() {
   }, []);
 
   const switchTheme = () =>
-    setTheme((prev) => (prev === "forest" ? "cupcake" : "forest"));
+    setTheme((prev) => (prev === "night" ? "winter" : "night"));
 
   return (
     <div className='body flex flex-col wallpaper' data-theme={theme}>
-      <Header onThemeChange={switchTheme} />
+      <div className='sticky top-0 z-30 bg-base-100 opacity-75 border-b border-base-content rounded-b-xl'>
+        <Header onThemeChange={switchTheme} />
+      </div>
       <Intro />
-      <About />
-      <Techs />
+      <Element name='about'>
+        <About />
+      </Element>
+      <Element name='texAndTools'>
+        <Techs />
+      </Element>
     </div>
   );
 }
